@@ -1,0 +1,58 @@
+.venue-cards { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.venue-card {
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(201,169,110,.12);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.venue-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.venue-card.featured {
+  border-color: rgba(201,169,110,.3);
+  box-shadow: var(--shadow-md), 0 0 0 2px rgba(201,169,110,.15);
+}
+
+.venue-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+  color: #fff; font-family: var(--font-body); font-size: .7rem;
+  font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  padding: .3rem 1rem; border-radius: 50px;
+}
+.venue-icon { font-size: 2.2rem; margin-bottom: .5rem; }
+.venue-tag {
+  display: block;
+  font-family: var(--font-body); font-size: .68rem;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text-light); margin-bottom: .4rem;
+}
+.venue-name {
+  font-family: var(--font-heading); font-size: 1.35rem; font-weight: 700;
+  color: var(--text-dark); margin-bottom: .6rem;
+}
+.venue-addr {
+  font-family: var(--font-body); font-size: .88rem;
+  line-height: 1.75; color: var(--text-medium); margin-bottom: 1rem;
+}
+.venue-events {
+  list-style: none;
+  font-family: var(--font-italic); font-style: italic;
+  font-size: .88rem; color: var(--gold); margin-bottom: 1.2rem;
+  display: flex; flex-direction: column; gap: .3rem;
+}
+.venue-btn {
+  display: inline-block;
+  padding: .65rem 1.8rem;
+  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+  color: #fff; font-family: var(--font-body);
+  font-size: .82rem; font-weight: 500; letter-spacing: 1px;
+  border-radius: 50px; box-shadow: var(--shadow-gold);
+  transition: .25s ease;
+}
+.venue-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(201,169,110,.45); }
+
+@media(min-width:640px) { .venue-cards { flex-direction: row; } .venue-card { flex: 1; } }

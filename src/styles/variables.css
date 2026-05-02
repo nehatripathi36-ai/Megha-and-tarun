@@ -1,0 +1,99 @@
+/* ================================================
+   GLOBAL CSS VARIABLES
+   Megha & Tarun Wedding - React Version
+   ================================================ */
+:root {
+  /* Fonts */
+  --font-heading: 'Cambria', Cambria, Georgia, 'Times New Roman', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body: 'Poppins', sans-serif;
+  --font-italic: 'Cormorant Garamond', serif;
+
+  /* Gold Palette */
+  --gold: #C9A96E;
+  --deep-gold: #8B6914;
+  --light-gold: #F0D78C;
+  --shimmer: #D4AF37;
+
+  /* Neutral Base */
+  --cream: #FFF8F0;
+  --ivory: #FFFFF0;
+  --warm-white: #FDF6EE;
+  --white: #FFFFFF;
+  --text-dark: #2C1810;
+  --text-medium: #5D4037;
+  --text-light: #8D6E63;
+
+  /* Brand Red */
+  --maroon: #800020;
+  --deep-red: #8B0000;
+
+  /* Event Colors */
+  --sunderkand: #E86100;
+  --sunderkand-bg: #FFF3E0;
+  --sunderkand-glow: rgba(232,97,0,0.25);
+
+  --henna: #7B2D8E;
+  --henna-bg: #F3E5F5;
+  --henna-glow: rgba(123,45,142,0.25);
+
+  --haldi: #E91E63;
+  --haldi-bg: #FCE4EC;
+  --haldi-glow: rgba(233,30,99,0.25);
+
+  --wedding: #C62828;
+  --wedding-bg: #FFEBEE;
+  --wedding-glow: rgba(198,40,40,0.25);
+
+  /* Overlays */
+  --overlay-light: rgba(255,252,248,0.93);
+  --overlay-medium: rgba(255,250,245,0.90);
+  --overlay-dark: rgba(30,15,5,0.62);
+
+  /* Effects */
+  --shadow-soft: 0 4px 20px rgba(0,0,0,0.07);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.11);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.16);
+  --shadow-gold: 0 4px 20px rgba(201,169,110,0.28);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* Reset */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); color: var(--text-dark); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #1a0800; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Section utility */
+.section-overlay { position: relative; padding: 3.5rem 0; }
+.section-overlay.light { background: var(--overlay-light); }
+.section-overlay.medium { background: var(--overlay-medium); }
+.container { width: 100%; max-width: 480px; margin: 0 auto; padding: 0 1.25rem; }
+.section-title { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--text-dark); text-align: center; margin-bottom: 0.4rem; letter-spacing: 1px; }
+.section-subtitle { font-family: var(--font-italic); font-size: 1.05rem; color: var(--text-light); text-align: center; font-style: italic; margin-bottom: 1rem; }
+.script { font-family: var(--font-script); }
+.divider { display: flex; align-items: center; justify-content: center; gap: 0.7rem; margin: 0.8rem auto 1.8rem; max-width: 200px; }
+.divider span:first-child, .divider span:last-child { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.divider .diamond { flex: none; width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); }
+
+/* Fade in animation */
+.fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (min-width: 480px) { .container { max-width: 520px; } .section-title { font-size: 2.3rem; } }
+@media (min-width: 640px) { .container { max-width: 600px; } .section-title { font-size: 2.6rem; } .section-overlay { padding: 4.5rem 0; } }
+@media (min-width: 768px) { .container { max-width: 680px; } }
+@media (min-width: 1024px) { .container { max-width: 760px; } }
+@media (prefers-reduced-motion: reduce) { .fade-in { opacity: 1; transform: none; transition: none; } }

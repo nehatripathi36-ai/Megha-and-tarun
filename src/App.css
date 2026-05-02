@@ -1,0 +1,76 @@
+/* ============================================
+   APP GLOBAL STYLES
+   ============================================ */
+
+/* Fixed couple background - spans whole page */
+.fixed-bg {
+  position: fixed;
+  inset: 0;
+  background: url('/images/couple.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -2;
+}
+.fixed-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.12);
+  z-index: -1;
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #1a0800, #2C1810, #1a0800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader-inner { text-align: center; }
+.preloader-bar {
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+  margin: 0 auto 1.5rem;
+  animation: barPulse 2s ease-in-out infinite;
+}
+.preloader-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.6rem;
+  color: #C9A96E;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 30px rgba(201,169,110,0.4);
+  animation: fadeUp 1s ease forwards;
+}
+.preloader-ring {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(201,169,110,0.2);
+  border-top-color: #C9A96E;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+/* Petals */
+.petals-wrap { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
+.petal {
+  position: absolute;
+  border-radius: 50% 0 50% 0;
+  opacity: 0;
+  animation: petalFall linear infinite;
+  filter: blur(0.5px);
+}
+
+/* Animations */
+@keyframes barPulse { 0%,100% { width:60px; opacity:.4; } 50% { width:120px; opacity:1; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes petalFall {
+  0% { opacity:0; transform: translate(0,-20px) rotate(0deg) scale(0.9); }
+  10% { opacity:.7; }
+  90% { opacity:.4; }
+  100% { opacity:0; transform: translate(var(--dx,60px), calc(100vh + 20px)) rotate(var(--rot,360deg)) scale(0.4); }
+}

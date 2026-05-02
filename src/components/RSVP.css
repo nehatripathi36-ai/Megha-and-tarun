@@ -1,0 +1,76 @@
+.script-title { font-family: var(--font-script) !important; font-size: 2.6rem !important; color: var(--deep-gold) !important; }
+
+.rsvp-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.4rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(201,169,110,.14);
+}
+
+.rsvp-families, .rsvp-contacts { text-align: center; }
+.rsvp-label {
+  font-family: var(--font-heading);
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--text-dark); margin-bottom: .7rem; letter-spacing: 1px;
+}
+.rsvp-families ul { list-style: none; display: flex; flex-direction: column; gap: .35rem; }
+.rsvp-families li {
+  font-family: var(--font-italic); font-style: italic;
+  font-size: .95rem; color: var(--text-medium);
+}
+.rsvp-phone {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--deep-gold);
+  margin-bottom: .4rem;
+  transition: .2s ease;
+}
+.rsvp-phone:hover { color: var(--maroon); }
+
+.rsvp-divider { height: 1px; background: rgba(201,169,110,.15); margin: 1.2rem 0; }
+
+.rsvp-actions { text-align: center; margin-bottom: 1.2rem; }
+.rsvp-btn {
+  display: inline-block; padding: .75rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-body); font-size: .84rem; font-weight: 500; letter-spacing: 1px;
+  transition: .25s ease;
+}
+.rsvp-btn.primary {
+  background: linear-gradient(135deg, var(--gold), var(--deep-gold));
+  color: #fff; box-shadow: var(--shadow-gold);
+}
+.rsvp-btn.primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(201,169,110,.45); }
+
+.rsvp-share { border-top: 1px solid rgba(201,169,110,.14); padding-top: 1.2rem; text-align: center; }
+.share-label {
+  font-family: var(--font-body); font-size: .7rem;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text-light); margin-bottom: .9rem;
+}
+.share-btns { display: flex; justify-content: center; gap: 1rem; }
+.share-btn {
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid rgba(201,169,110,.28);
+  background: rgba(201,169,110,.05);
+  color: var(--deep-gold);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: .25s ease;
+}
+.share-btn:hover { background: var(--gold); color: #fff; border-color: var(--gold); transform: scale(1.1); }
+
+/* Toast */
+.rsvp-toast {
+  position: fixed; bottom: 2rem; left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background: rgba(30,10,0,.9); color: var(--gold);
+  padding: .7rem 1.5rem; border-radius: 50px;
+  font-family: var(--font-body); font-size: .84rem; letter-spacing: 1px;
+  z-index: 9999; opacity: 0;
+  transition: opacity .3s ease, transform .3s ease;
+  border: 1px solid rgba(201,169,110,.28);
+  backdrop-filter: blur(10px);
+}
+.rsvp-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }

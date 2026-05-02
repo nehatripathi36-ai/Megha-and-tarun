@@ -1,0 +1,192 @@
+.events-section .medium { padding-bottom: 2rem; }
+
+/* ---- Base card ---- */
+.event-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.event-card:hover { transform: translateY(-4px); }
+
+.ev-accent { height: 4px; width: 100%; }
+
+/* Header */
+.ev-header { text-align: center; padding: 1.4rem 1.4rem .9rem; }
+.ev-icon { font-size: 1.9rem; display: block; margin-bottom: .4rem; }
+.ev-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem; font-weight: 700;
+  margin-bottom: .2rem;
+}
+.ev-hindi { font-size: .95rem; color: var(--text-light); letter-spacing: 2px; }
+.ev-sub-text {
+  font-family: var(--font-body); font-size: .75rem;
+  text-transform: uppercase; letter-spacing: 3px;
+  color: var(--text-light); font-weight: 500;
+}
+
+/* Image */
+.ev-img-wrap {
+  position: relative; margin: 0 1rem;
+  border-radius: var(--radius-md); overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.ev-img-wrap img { width: 100%; display: block; transition: transform .6s ease; }
+.event-card:hover .ev-img-wrap img { transform: scale(1.04); }
+.ev-img-glow {
+  position: absolute; inset: 0;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s ease;
+}
+.event-card:hover .ev-img-glow { opacity: 1; }
+
+/* Body */
+.ev-body { padding: 1.4rem; text-align: center; }
+.ev-desc {
+  font-family: var(--font-italic); font-size: .98rem;
+  line-height: 1.85; color: var(--text-medium);
+  margin-bottom: .85rem; letter-spacing: .4px;
+}
+.ev-invite {
+  font-family: var(--font-body); font-size: .72rem;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text-light); margin-bottom: .4rem;
+}
+.ev-name {
+  font-family: var(--font-heading);
+  font-size: 1.55rem; font-weight: 700;
+  letter-spacing: 1px; margin-bottom: .9rem;
+}
+.ev-name.script { font-family: var(--font-script); font-size: 2.1rem; font-weight: 400; }
+.ev-of { font-family: var(--font-italic); font-style:italic; color:var(--text-light); margin-bottom:.4rem; }
+.ev-bride {
+  font-family: var(--font-heading);
+  font-size: 1.35rem; letter-spacing: 6px; font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+/* DateTime */
+.ev-datetime {
+  display: flex; justify-content: center; align-items: center;
+  gap: 1.2rem; margin-bottom: 1.2rem;
+  padding: .9rem 1rem; border-radius: var(--radius-md);
+  background: rgba(0,0,0,.03);
+}
+.ev-date { display: flex; align-items: center; gap: .65rem; }
+.day-num {
+  font-family: var(--font-heading);
+  font-size: 2.4rem; font-weight: 800; line-height: 1;
+}
+.day-info { display: flex; flex-direction: column; text-align: left; }
+.day-month {
+  font-family: var(--font-body); font-size: .72rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+}
+.day-week {
+  font-family: var(--font-body); font-size: .66rem;
+  text-transform: uppercase; letter-spacing: 1px; opacity: .65;
+}
+.ev-time { display: flex; flex-direction: column; align-items: center; }
+.time-main {
+  font-family: var(--font-heading);
+  font-size: 1.15rem; font-weight: 700;
+}
+.time-sfx {
+  font-family: var(--font-body); font-size: .62rem;
+  text-transform: uppercase; letter-spacing: 1px; opacity: .65;
+}
+
+/* Location */
+.ev-location {
+  display: flex; align-items: flex-start; gap: .7rem;
+  padding: .9rem 1rem; border-radius: var(--radius-md);
+  background: rgba(0,0,0,.03);
+  border: 1px dashed rgba(0,0,0,.09);
+}
+.loc-pin { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.loc-text {
+  font-family: var(--font-body); font-size: .84rem;
+  line-height: 1.65; color: var(--text-medium);
+}
+
+/* Wedding extra */
+.ev-quote-big {
+  font-family: var(--font-italic); font-size: 1.05rem;
+  font-style: italic; line-height: 1.9; color: var(--maroon);
+  margin-bottom: .9rem;
+}
+.ev-parents {
+  font-family: var(--font-heading); font-size: .88rem;
+  font-weight: 700; color: var(--text-dark);
+  margin-bottom: .6rem; line-height: 1.5;
+}
+.ev-solicit {
+  font-family: var(--font-italic); font-style: italic;
+  font-size: .88rem; line-height: 1.7; color: var(--text-medium);
+  margin-bottom: .7rem;
+}
+.ev-bride.wedding-bride {
+  font-family: var(--font-script);
+  font-size: 2.8rem; font-weight: 400; letter-spacing: 0;
+  color: var(--maroon); margin-bottom: .1rem;
+}
+.ev-weds {
+  font-family: var(--font-italic); font-style: italic;
+  color: var(--text-light); margin-bottom: .1rem;
+}
+.ev-groom {
+  font-family: var(--font-script);
+  font-size: 2.4rem; font-weight: 400;
+  color: var(--maroon); margin-bottom: .5rem;
+}
+.ev-groom-parents {
+  font-family: var(--font-italic); font-style: italic;
+  font-size: .84rem; color: var(--text-medium);
+  margin-bottom: .7rem; line-height: 1.6;
+}
+.wedding-dt { background: var(--wedding-bg) !important; }
+
+/* ---- THEME COLOURS ---- */
+
+/* Sunderkand - Orange */
+.sunderkand .ev-accent { background: linear-gradient(90deg, var(--sunderkand), #FF8F00, var(--sunderkand)); }
+.sunderkand .ev-title { color: var(--sunderkand); }
+.sunderkand .ev-name { color: var(--sunderkand); }
+.sunderkand .day-num { color: var(--sunderkand); }
+.sunderkand .ev-datetime { background: var(--sunderkand-bg); }
+.sunderkand .ev-location { background: var(--sunderkand-bg); border-color: rgba(232,97,0,.2); }
+.sunderkand .ev-img-glow { background: linear-gradient(to top, var(--sunderkand-glow), transparent 55%); }
+.sunderkand:hover { box-shadow: var(--shadow-lg), 0 0 28px var(--sunderkand-glow); }
+
+/* Henna - Purple */
+.henna .ev-accent { background: linear-gradient(90deg, var(--henna), #9C27B0, var(--henna)); }
+.henna .ev-title { color: var(--henna); }
+.henna .ev-name { color: var(--henna); }
+.henna .ev-bride { color: var(--henna); }
+.henna .ev-location { background: var(--henna-bg); border-color: rgba(123,45,142,.2); }
+.henna .ev-img-glow { background: linear-gradient(to top, var(--henna-glow), transparent 55%); }
+.henna:hover { box-shadow: var(--shadow-lg), 0 0 28px var(--henna-glow); }
+
+/* Haldi - Pink */
+.haldi .ev-accent { background: linear-gradient(90deg, var(--haldi), #F06292, var(--haldi)); }
+.haldi .ev-title { color: var(--haldi); }
+.haldi .ev-name { color: var(--haldi); }
+.haldi .haldi-name { color: #8B5E3C; }
+.haldi .day-num { color: var(--haldi); }
+.haldi .ev-datetime { background: var(--haldi-bg); }
+.haldi .ev-location { background: var(--haldi-bg); border-color: rgba(233,30,99,.2); }
+.haldi .ev-img-glow { background: linear-gradient(to top, var(--haldi-glow), transparent 55%); }
+.haldi:hover { box-shadow: var(--shadow-lg), 0 0 28px var(--haldi-glow); }
+
+/* Wedding - Maroon */
+.wedding .ev-accent { background: linear-gradient(90deg, var(--wedding), var(--maroon), var(--wedding)); }
+.wedding .ev-title { color: var(--maroon); }
+.wedding .day-num { color: var(--maroon); }
+.wedding .ev-location { background: var(--wedding-bg); border-color: rgba(198,40,40,.2); }
+.wedding .ev-img-glow { background: linear-gradient(to top, var(--wedding-glow), transparent 55%); }
+.wedding:hover { box-shadow: var(--shadow-lg), 0 0 28px var(--wedding-glow); }
+
+@media(min-width:640px) { .ev-name.script{font-size:2.4rem;} .ev-bride.wedding-bride{font-size:3.2rem;} .ev-groom{font-size:2.8rem;} }

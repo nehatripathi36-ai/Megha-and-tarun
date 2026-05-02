@@ -1,0 +1,46 @@
+.script-title { font-family: var(--font-script) !important; font-size: 2.6rem !important; color: var(--deep-gold) !important; }
+
+.families-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: .8rem; flex-wrap: wrap; margin-bottom: 1.5rem;
+}
+.fam-card {
+  flex: 1; min-width: 130px; max-width: 200px;
+  text-align: center;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(201,169,110,.13);
+}
+.fam-badge {
+  font-family: var(--font-body); font-size: .62rem;
+  text-transform: uppercase; letter-spacing: 2px;
+  color: var(--text-light); margin-bottom: .7rem;
+}
+.fam-icon { font-size: 1.4rem; margin-bottom: .5rem; }
+.fam-parents {
+  font-family: var(--font-body); font-size: .76rem;
+  line-height: 1.6; color: var(--text-medium); margin-bottom: .8rem;
+}
+.fam-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto .8rem; }
+.fam-name {
+  font-family: var(--font-script);
+  font-size: 1.9rem; color: var(--deep-gold);
+  margin-bottom: .2rem;
+}
+.fam-role { font-family: var(--font-italic); font-style:italic; font-size:.85rem; color:var(--text-light); }
+
+.fam-heart { font-size: 1.6rem; animation: heartbeat 1.6s ease-in-out infinite; }
+@keyframes heartbeat { 0%,100%{transform:scale(1);} 15%{transform:scale(1.18);} 30%{transform:scale(1);} 45%{transform:scale(1.12);} }
+
+.blessing-msg {
+  text-align: center; padding: 1.4rem 1.2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(201,169,110,.07), rgba(201,169,110,.02));
+  border: 1px solid rgba(201,169,110,.14);
+}
+.blessing-msg p {
+  font-family: var(--font-italic); font-style: italic;
+  font-size: 1.05rem; line-height: 1.9; color: var(--text-medium);
+}
