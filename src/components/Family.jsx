@@ -25,7 +25,7 @@ export default function Family() {
             <div className="fam-card">
               <div className="fam-badge">Groom&apos;s Family</div>
               <div className="fam-icon">❤️</div>
-              <p className="fam-parents">Smt. Meenu Dudeja<br />&amp; Shri. Nand Lal Dudeja</p>
+              <p className="fam-parents">Smt. Meena Dudeja<br />&amp; Shri. Nand Lal Dudeja</p>
               <div className="fam-rule" />
               <p className="fam-name script">Tarun</p>
               <p className="fam-role">The Groom</p>
