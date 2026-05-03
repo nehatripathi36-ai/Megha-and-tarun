@@ -137,7 +137,7 @@ export default function Events() {
               <p className="ev-bride wedding-bride">Megha</p>
               <p className="ev-weds">weds</p>
               <p className="ev-groom">Tarun</p>
-              <p className="ev-groom-parents">( S/o Smt. Meenu Dudeja &amp; Shri. Nand Lal Dudeja )</p>
+              <p className="ev-groom-parents">( S/o Smt. Meena Dudeja &amp; Shri. Nand Lal Dudeja )</p>
               <p className="ev-solicit">Cordially invite you to join the occasion of their joyous commitment on</p>
               <div className="ev-datetime wedding-dt">
                 <div className="ev-date">
